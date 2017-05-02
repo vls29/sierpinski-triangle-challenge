@@ -14,6 +14,8 @@ Well Java is probably the wrong tool, but what if I chose to use Java, how do I 
 
 So, what about Javascript/HTML?  https://jsfiddle.net/macloo/JLVva/ that's promising, but I need to zoom and drag and preferably write some unit tests.
 
+Ooo, SVGs and they can be zoomed + panned (http://www.petercollingridge.co.uk/interactive-svg-components/pan-and-zoom-control), albeit using buttons, but then that's all I can find examples for in Javascript
+
 ### Unit Testing ###
 
 So there's an excellent post here: http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd on various javascript testing frameworks.
