@@ -10,7 +10,8 @@ https://www.w3schools.com/graphics/tryit.asp?filename=trysvg_polygon4
 
 Example of drawing three triangles:
 
-```<svg height="400" width="400" viewBox="50 50 400 400">
+```
+<svg height="400" width="400" viewBox="50 50 400 400">
   <polygon points="0,400 200,0 400,400 0,400 100,200 300,200 200,400 100,200" style="fill:white;stroke:purple;stroke-width:1;fill-rule:evenodd;">
   
   </polygon>
