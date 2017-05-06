@@ -1,8 +1,11 @@
+global.node = true;
 var assert = require('assert');
 var Triangle = require('../triangle');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-global.$ = require('jquery')((new JSDOM('<html></html>')).window);
+var html = '<html><body><svg height="400" width="400" viewBox="0 0 400 400"xmlns=" http://www.w3.org/2000/svg"  version="1.1"></svg></body></html>';
+global.document  = (new JSDOM(html)).window;
+global.$ = require('jquery')((new JSDOM(html)).window);
 
 describe('Triangle Tests', function() {
 	describe('Triangle Constructor Tests', function() {
