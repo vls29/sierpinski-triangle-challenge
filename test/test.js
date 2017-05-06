@@ -38,13 +38,13 @@ describe('Triangle Tests', function() {
 	});
 
 	describe('Triangle Children Tests', function() {
-		it('Create children', function() {
+		it('Descend one level', function() {
 			var x = 0;
 			var y = 400;
 			var width = 400;
 		 	var parent = new Triangle(null, x, y, width);
 		
-			parent.createChildren();
+			parent.descend();
 			
 			assert.equal(parent.children.length, 3);
 			
@@ -74,20 +74,79 @@ describe('Triangle Tests', function() {
 			assert.equal(child3.id, (parent.id + '#' + child3.x + child3.y));
 			assert.equal(child3.children.length, []);
 		});
-		
-		it('Remove children', function () {
+
+		it('Descend two levels', function() {
 			var x = 0;
 			var y = 400;
 			var width = 400;
 		 	var parent = new Triangle(null, x, y, width);
 		
-			parent.createChildren();
+			assert.equal(parent.children.length, 0);
+		
+			parent.descend();
 			
 			assert.equal(parent.children.length, 3);
 			
-			parent.removeChildren();
+			for(var i = 0 ; i < parent.children.length ; i++){
+				assert.equal(parent.children[i].children.length, 0);
+			}
+			
+			parent.descend();
+			
+			assert.equal(parent.children.length, 3);
+			
+			for(var i = 0 ; i < parent.children.length ; i++){
+				assert.equal(parent.children[i].children.length, 3);
+			}
+		});
+
+		it('Ascend one level', function () {
+			var x = 0;
+			var y = 400;
+			var width = 400;
+		 	var parent = new Triangle(null, x, y, width);
+		
+			parent.descend();
+			
+			assert.equal(parent.children.length, 3);
+			
+			parent.ascend();
 			
 			assert.equal(parent.children.length, []);
+		});
+		
+		it('Ascend two levels', function () {
+			var x = 0;
+			var y = 400;
+			var width = 400;
+		 	var parent = new Triangle(null, x, y, width);
+		
+			assert.equal(parent.children.length, 0);
+		
+			parent.descend();
+			parent.descend();
+			parent.ascend();
+			assert.equal(parent.children.length, 3);
+			parent.ascend();
+			assert.equal(parent.children.length, 0);
+		});
+		
+		it('Ascend more than decended does not remove parent', function () {
+			var x = 0;
+			var y = 400;
+			var width = 400;
+		 	var parent = new Triangle(null, x, y, width);
+		
+			assert.equal(parent.children.length, 0);
+		
+			parent.descend();
+			parent.descend();
+			parent.ascend();
+			assert.equal(parent.children.length, 3);
+			parent.ascend();
+			assert.equal(parent.children.length, 0);
+			parent.ascend();
+			assert.equal(parent.children.length, 0);
 		});
 	});
 });
