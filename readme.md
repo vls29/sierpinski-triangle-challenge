@@ -48,6 +48,15 @@ So since every child triangle of a parent triangle draws the same outer border, 
 
 ## How To Run The Mocha Tests ##
 
+If you have not already loaded all the Node.js dependencies, begin by running the following command
+```
+npm install
+```
+
+To run the tests, run the following command
+```
+npm test
+```
 
 ## How To Run The Code ##
 
