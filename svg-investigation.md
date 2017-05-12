@@ -27,7 +27,7 @@ Example of drawing three triangles:
 
 Quick bit of googling has revealed that there is a JQuery plugin available on GitHub with an example website http://danielhoffmann.github.io/jquery-svg-pan-zoom/
 
-Turns out that after having created a basic page (https://github.com/vls29/sierpinski-triangle-challenge/blob/master/svg-jquery-zoom-pan-example.html) using the above code that was built on w3schools, the svg pan zoom plugin had some significant bugs!  
+Turns out that after having created a basic page using the above code that was built on w3schools, the svg pan zoom plugin had some significant bugs!  
 
 I noticed that on Firefox if I double clicked, it paid no attention to the max zoom param - only when using mouse zooming would it pay attention.  This meant that I zoomed in a significant distance in Firefox and it started glitching so badly that the browser became unusable for a few seconds while it attempted to draw on screen (The browser was flashing and cpu usage for the Firefox process spiked).
 
