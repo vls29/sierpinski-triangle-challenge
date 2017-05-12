@@ -2,7 +2,7 @@
 
 SVG does seem like a nice way of drawing the triangles as they will be scalable and not loose quality/have to be re-drawn.
 
-Biggest disadvantage is that it's quite browser specific...
+Biggest disadvantage is that not all browsers can draw SVGs...
 
 ### SVG W3Schools Try It Out SVG Sketch Pad ###
 

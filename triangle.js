@@ -1,3 +1,9 @@
+/*
+  May 2017
+  Author : VLS29
+  Repository: https://github.com/vls29/sierpinski-triangle-challenge
+*/
+
 class Triangle {
 	constructor(parent, x, y, width) {
 		if(parent === null){
